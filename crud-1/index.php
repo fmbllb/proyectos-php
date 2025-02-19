@@ -11,13 +11,13 @@
 </head>
 
 <body>
-    <h1 class="mt-5 text-center">Creación de usuario</h1>
+    <h1 class="mt-5 text-center">Creación de usuario, vista administrador</h1>
     <div class="container-fluid">
         <form class="col-4 p-3 mt-5 m-auto" method="POST">
             <h3 class="text-center text-secondary">Registro</h3>
             <?php
-                include "modelo/conexion.php";
-                include "controlador/registro_persona.php";
+            include "modelo/conexion.php";
+            include "controlador/registro_persona.php";
             ?>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Nombre</label>
@@ -39,8 +39,10 @@
                 <label for="exampleInputEmail1" class="form-label">Correo</label>
                 <input type="email" class="form-control" name="correo">
             </div>
-
-            <button type="submit" class="btn btn-primary" name="registrar" value="ok">Registrar</button>
+            <div class="m-auto text-center">
+                <button type="submit" class="btn btn-primary me-5" name="registrar" value="ok">Registrar usuario</button>
+                <a href="lista_personas.php" class="btn btn-warning ms-5" name="lista-usuario" value="lista">Lista de usuarios</a>
+            </div>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
