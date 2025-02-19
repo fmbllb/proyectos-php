@@ -11,11 +11,13 @@
 </head>
 
 <body>
+
     <div class="col-8 p-3 m-auto">
+        <a href="index.php"><i class="fa-solid fa-arrow-left"></i></a>
         <h1 class="text-center text-secondary m-5">Lista de personas</h1>
         <?php
-            include "controlador/eliminar_persona.php";
-            include "modelo/conexion.php";
+        include "controlador/eliminar_persona.php";
+        include "modelo/conexion.php";
         ?>
         <table class="table">
             <thead class="bg-info">
@@ -36,24 +38,24 @@
                 while ($datos = $sql->fetch_object()) { ?>
                     <tr>
                         <td><?= $datos->id ?></td>
-                        
+
                         <td><?= $datos->nombre ?></td>
-                        
-                        
+
+
                         <td><?= $datos->apellido ?></td>
-                        
-                    
+
+
                         <td><?= $datos->dni ?></td>
-                        
-                    
+
+
                         <td><?= $datos->fech_nacimiento ?></td>
-                        
-                    
+
+
                         <td><?= $datos->correo ?></td>
-                        
+
                         <td>
                             <a href="modificar_persona.php?id=<?= $datos->id ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="lista_personas.php?id=<?= $datos->id?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
+                            <a href="lista_personas.php?id=<?= $datos->id ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                         </td>
                     </tr>
                 <?php }
