@@ -20,10 +20,10 @@
                         <a href="index.php" class="btn">Inicio</a>
                     </li>
                     <li class="list-group-item btn">
-                        <a href="#" class="btn">Agregar Producto</a>
+                        <a href="agregar_producto.php" class="btn">Agregar Producto</a>
                     </li>
                     <li class="list-group-item btn">
-                        <a href="#" class="btn">Lista de Productos</a>
+                        <a href="#" class="btn">Modificar Producto</a>
                     </li>
                     <li class="list-group-item">
                         <h5>Tus productos al instante.</h5>
