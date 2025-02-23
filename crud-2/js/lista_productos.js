@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function(){
-    traerDatos();
+    obtenerDatos();
 });
 
 // Para formatear a json y pasar los datos al html en la sig funcion
