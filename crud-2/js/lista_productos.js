@@ -1,19 +1,19 @@
-document.addEventListener("DOMContentLoaded", async function(){
+document.addEventListener("DOMContentLoaded", async function () {
     obtenerDatos();
 });
 
 // Para formatear a json y pasar los datos al html en la sig funcion
-async function obtenerDatos(){
-    const respuesta = await fetch("./php/lista_productos.php");
+async function obtenerDatos() {
+    const respuesta = await fetch(".php/lista_productos.php");
     const informacion = await respuesta.json();
 
     agregarDatosTabla(informacion);
 }
 
-async function agregarDatosTabla(informacion){
+async function agregarDatosTabla(informacion) {
     const tbody = document.getElementById("productos");
     tbody.innerHTML = "";
-    for(let i = 0; i < informacion.total; i++){
+    for (let i = 0; i < informacion.total; i++) {
         const fila = informacion.data[i];
         const tr = document.createElement("tr");
         let id = fila.id;
@@ -28,6 +28,6 @@ async function agregarDatosTabla(informacion){
     }
 }
 
-async function eliminarProducto(){
+async function eliminarProducto() {
     console.log("eliminado");
 }
