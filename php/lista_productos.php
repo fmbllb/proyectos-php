@@ -1,3 +1,3 @@
 <?php
-
+hacer la query
 ?>
